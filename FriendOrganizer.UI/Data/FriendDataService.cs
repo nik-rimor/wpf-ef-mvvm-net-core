@@ -22,6 +22,9 @@ namespace FriendOrganizer.UI.Data
         //    yield return new Friend { FirstName = "Chrissi", LastName = "Egin" };
         //}
 
+
+        // autofac will automatically inject this Func so that we can use it
+        // to create instances of that context
         public FriendDataService(Func<FriendOrganizerDbContext> contextCreator)
         {
             _contextCreator = contextCreator;
